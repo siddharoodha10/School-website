@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=""en-US>
+<head>
+	<title>Teachers</title>
+<style>
+    table{
+ width: 50%;
+  height: 50%;
+    }
+
+    table, th, td {
+  border:2px solid black;
+  margin-left: 30%;
+  margin-top: 5%;
+  background-color: lavenderblush;
+
+}
+
+.logout
+{
+width: 10%;
+padding: 10px;
+border-radius: 20px;
+font-size: 15px;
+margin-top:30px;
+margin-left: 60px
+border: none;
+outline: none;
+background-color: cornflowerblue;
+}
+</style>
+
+</head>
+<body style="text-align: center; background-color: darkgrey;">
+    <h1>ALL STUDENTS</h1>
+            <table>
+                <tr>
+                    <th>Student Id</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Class</th>
+                    <th>Contact NO</th>
+                    <th>Fees</th>
+                </tr>
+            {% for i in stud%}
+            
+            <tr>
+                
+                <td>{{i.S_id}}</td>
+                <td>{{i.F_name}}</td>
+                <td>{{i.L_name}}</td>
+                <td>{{i.Class}}</td>
+                <td>{{i.Contact}}</td>
+                <td>{{i.S_fee}}</td>
+            </tr>
+            {%endfor%}
+            <table>
+
+        <button type="submit" onclick="location.href ='teacherloginD'" class="logout">back</button>
+
+</body>
+</html>

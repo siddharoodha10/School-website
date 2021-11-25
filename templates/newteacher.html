@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>New teacher</title>
+
+<style>
+
+
+
+
+.input-box
+{
+    border-radius: 20px;
+    padding: 100px;
+    margin:10px 0;
+    width: 80%;
+    border: 1px solid #999;
+    outline: none;
+    
+
+}
+.submit
+{
+width: 100%;
+padding: 10px;
+border-radius: 20px;
+font-size: 15px;
+margin:10px 10px;
+border: none;
+outline: none;
+background-color: cornflowerblue;
+}
+.logout
+{
+width: 100%;
+padding: 10px;
+border-radius: 20px;
+font-size: 15px;
+margin:10px 10px;
+border: none;
+outline: none;
+background-color: cornflowerblue;
+}
+.registercontainer {
+  padding: 20px;
+  background:rgba(0, 0, 0, 0.26);
+  width:35%;
+  margin-top:3%;
+  margin-left:30%;
+  box-shadow: 0 0 20px #ccc;
+
+}
+
+.register
+{
+margin-left:40%;
+font-size:xx-large;
+color:white;
+}
+.input-boxr
+{
+    border-radius: 20px;
+    padding: 10px;
+    margin:10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+    background:white;
+
+}
+.lable{
+    color:white;
+}
+
+
+.top{
+    background-color: bisque;
+    
+
+}
+
+     </style>
+    
+    
+   
+</head>
+<body class="top">
+
+
+ <form action="newteacher" method="POST"  >
+            {% csrf_token %}
+             <div class= register>
+            <h2> Add new Teacher</h2>
+            </div>
+            <div class="registercontainer">
+        <label  class="lable"> Teacher id</label>
+            <input type="text"  class="input-boxr" name="T_id" placeholder="Teacher id" required>
+        <label  class="lable">First Name</label>
+            <input type="text"  class="input-boxr" name="F_name" placeholder="First Name" required>
+
+         <label class="lable">Last Name</label>
+        <input type="text"  class="input-boxr" name="L_name" placeholder="Last Name" required>
+        
+        <label  class="lable">Salary</label>
+            <input type="text"  class="input-boxr" name="Sallary" placeholder="Salary" required>
+        <label for="J_Date" class="lable">Join_date</label>
+            <input type="text"  class="input-boxr" name="Join_date" placeholder="Date formate yyyy-mm-dd" required>
+
+            <label  class="lable">Mobile_no</label>
+            <input type="text"  class="input-boxr" name="Mobile_no" placeholder="10 digit valid mobile no" required>
+
+            <label  class="lable">Password</label>
+            <input type="text"  class="input-boxr" name="password" placeholder="password" required>
+        
+
+        <button type="submit" class="submit">submit</button>
+        <button type="submit" onclick="location.href ='/adminview'" class="logout">back</button>
+       
+   
+    <div  >
+        
+    </div>
+    </div>
+    
+        
+
+    
+</form>
+</div>  
+</div>
+    
+    
+
+
+</body>
+</html>

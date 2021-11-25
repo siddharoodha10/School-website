@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Teacher login</title>
+
+
+  <style type="text/css">
+ 
+ .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      color:ghostwhite;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid cornsilk;
+      margin-bottom: 20%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: blue;
+      color:cornsilk;
+    }
+  </style>
+
+
+
+
+
+
+</head>
+
+<body>
+  {% include "header.html" %}
+  <br>
+  <br>
+  <br><br>
+
+  <form method="post" action="teacherloginD">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Teacher Login Page</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+
+        <input type="text" placeholder="teacher id" name="T_id" required>
+
+
+            </div>
+            <div class="col-md-6">
+
+              
+        
+        <input type="password" placeholder=" Password" name="password" required>
+
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btnSubmit">Login</button>
+          <div class="text-center">Do not have account? <a href="/">Contact Adminstrater</a></div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+
+</body>
+
+</html>

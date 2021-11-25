@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=""en-US>
+<head>
+	<title>Teachers</title>
+<style>
+    table{
+ width: 50%;
+  height: 50%;
+    }
+
+    table, th, td {
+  border:2px solid black;
+  margin-left: 30%;
+  margin-top: 5%;
+  background-color: lavenderblush;
+}
+
+.logout
+{
+width: 10%;
+padding: 10px;
+border-radius: 20px;
+font-size: 15px;
+margin-top:30px;
+margin-left: 60px
+border: none;
+background-color: cornflowerblue;
+}
+</style>
+
+</head>
+<body style="text-align: center; background-color: darkgrey">
+    <h1>ALL TEACHERS</h1>
+            <table>
+                <tr>
+                    <th>T Id</th>
+                    <th>F name</th>
+                    <th>L name</th>
+                    <th>Sallary</th>
+                    <th>Join Date</th>
+                    <th>Mobile No</th>
+                </tr>
+            {% for i in teach%}
+            
+            <tr>
+                
+                <td>{{i.T_id}}</td>
+                <td>{{i.F_name}}</td>
+                <td>{{i.L_name}}</td>
+                <td>{{i.Sallary}}</td>
+                <td>{{i.Join_date}}</td>
+                <td>{{i.Mobile_no}}</td>
+            </tr>
+            {%endfor%}
+            <table>
+
+        <button type="submit" onclick="location.href ='/adminview'" class="logout">back</button>
+
+</body>
+</html>

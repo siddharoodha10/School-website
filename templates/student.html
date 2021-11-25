@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style media="screen">
+
+    header {
+      position: fixed;
+      background: black;
+      padding: 10px;
+      width: 100%;
+
+    }
+
+    .left_area h3 {
+      color:white;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+
+
+    .logout_btn {
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 50px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+    .new_student{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 200px;
+      font-size: 25px;
+      color: black;
+
+    }
+    .new_teacher{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 400px;
+      font-size: 25px;
+      color: black;
+
+    }
+    .new_admin{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 600px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+
+    .total_Teacher{
+    background-color:red;
+    margin-left: 25%;
+    margin-right: 50%;
+    border: solid;
+   }
+
+   .count{
+    margin-top: -50px;
+    float: right;
+   }
+
+   .total_Student{
+    background-color:red;
+    margin-left: 25%;
+    margin-right: 50%;
+    border: solid;
+   }
+
+   .row{
+    margin-left: 0%;
+    margin-right: 0%;
+
+   }
+
+   .back{
+    background-color:bisque;
+   }
+
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+  
+  <header>
+    <div class="left_area">
+      <h3>School Management</h3>
+    </div>
+  
+    <div class="right_area">
+      <a href="/logout" class="logout_btn">Logout</a>
+    </div>
+  </header>
+
+    
+
+ 
+  
+<div class="back">
+  <br><br><br><br><br><br><br>
+<div>
+<div class="row">
+    <div class="total_Teacher" >
+            <h1 >Name</h1>
+            <h2 class="count" style="padding: 20px;">{{first}}</h2>
+    </div>
+    <br><br><br>
+
+    <div class="total_Student">
+      <h1>Roll No</h1>
+       <h2 class="count" style="padding: 20px;">{{roll}}</h2>
+</div>
+
+    <br><br><br>
+    <div class="total_Student">
+           <h1>Mobile NO</h1>
+            <h2 class="count" style="padding: 20px;">{{mobile}}</h2>
+    </div>
+
+    <br><br><br>
+    <div class="total_Student">
+           <h1>Fees</h1>
+            <h2 class="count" style="padding: 20px;">{{fees}}</h2>
+    </div>
+
+    <br><br><br>
+    
+    <div class="total_Student">
+           <h1>Total attendance</h1>
+            <h2 class="count" style="padding: 20px;">{{att}}</h2>
+    </div>
+        
+  </div>
+  
+</div>
+
+</div>
+  
+
+  </div>
+</body>
+
+</html>

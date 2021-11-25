@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style media="screen">
+
+    header {
+      position: fixed;
+      background: black;
+      padding: 10px;
+      width: 100%;
+
+    }
+
+    .left_area h3 {
+      color:white;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+
+
+    .logout_btn {
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 50px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+    .view_student{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 750px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+    .view_teacher{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 950px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+    .new_student{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 200px;
+      font-size: 25px;
+      color: black;
+
+    }
+    .new_teacher{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 400px;
+      font-size: 25px;
+      color: black;
+
+    }
+    .new_admin{
+      padding: 5px;
+      background: cyan;
+      float: right;
+      margin-top: -50px;
+      margin-right: 600px;
+      font-size: 25px;
+      color: black;
+
+    }
+
+
+    .total_Teacher{
+    background-color:red;
+    margin-left: 25%;
+    margin-right: 50%;
+    border: solid;
+   }
+
+   .count{
+    margin-top: -50px;
+    float: right;
+   }
+
+   .total_Student{
+    background-color:red;
+    margin-left: 25%;
+    margin-right: 50%;
+    border: solid;
+   }
+
+   .row{
+    margin-left: 0%;
+    margin-right: 0%;
+
+   }
+
+   .back{
+    background-color:bisque;
+   }
+
+  </style>
+
+
+
+</head>
+
+<body class="back">
+
+  
+  <header>
+    <div class="left_area">
+      <h3>School Management</h3>
+    </div>
+    <div class="new_teacher">
+      <a href="/newteacher">New Teacher</a>
+    </div>
+    <div class="new_student">
+    <a href="/newstudent">New Student</a>
+  
+    </div>
+
+    <div class="view_student">
+      <a href="/view_student">view Student</a>
+    
+      </div>
+    
+      <div class="view_teacher">
+      <a href="/view_teacher">view teacher</a>
+    
+      </div>
+
+
+    <div class="new_admin">
+    <a href="http://127.0.0.1:8000/admin/">New admin</a>
+  
+    </div>
+    <div class="right_area">
+      <a href="/logout" class="logout_btn">Logout</a>
+    </div>
+  </header>
+
+    
+
+ 
+  
+<div >
+  <br><br><br><br><br><br><br>
+<div class="row">
+    <div class="total_Teacher" >
+            <h1 >Total Teacher</h1>
+            <h2 class="count" style="padding: 20px;"><span>{{teachercount}}</span></h2>
+
+    </div>
+    
+    <br><br><br>
+    <div class="total_Student">
+           <h1>Total Student</h1>
+            <h2 class="count" style="padding: 20px;">{{studentcount}}</h2>
+    </div>
+        
+  </div>
+  
+  <br><br><br>
+
+</div>
+  
+
+  </div>
+</body>
+
+</html>
